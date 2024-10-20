@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            max-height: 100vh;
+            background-color: #1F252E;
+        }
+        header {
+            padding: 1.7rem 1rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            max-width: 80%;
+            margin: auto;
+            align-items: center;
+            background-color: transparent;
+        }
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: .97rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            padding: 1rem;
+            padding: 0.4rem 1rem;
+        }
+        nav a.active,
+        nav a:hover {
+            color: #00E8F8;
+            border-radius: 1rem;
+            transition: all.3s ease-in-out;
+        }
+        #click {
+            display: none;
+        }
+        .menu i {
+            color: #00E8F8;
+        }
+        .menu {
+            display: none;
+        }
+        section {
+            margin: 2rem 8.5rem;
+        }
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem auto;
+        }
+        .main h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        .main p {
+            margin-top: 1rem;
+            font-size: .98rem;
+            color: #fff;
+        }
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            margin-top: 1.7rem;
+        }
+        .social a {
+            color: #00E8F8;
+            font-size: 1rem;
+            border: 1.6px solid #00E8F8;
+            border-radius: 50%;
+            padding: .35rem;
+            text-align: center;
+            width: 26px;
+        }
+        .social a:hover {
+            color: #1F252E;
+            background-color: #00E8F8;
+            box-shadow: 0 0 20px #00E8F8;
+            transition: all .3s ease-in-out;
+        }
+        .main h1 span:nth-child(1) {
+            font-size: 1.5rem;
+        }
+        .main h1 span:nth-child(2) {
+            color: #00E8F8;
+        }
+        .images {
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-position: 0 -75px;
+            -webkit-box-shadow: 0 10px 10px -10px #000000;
+            -moz-box-shadow: 0 10px 10px -10px #000000;
+            box-shadow: 0px 16px 4px -10px #00E8F8;
+            width: 528px;
+            background-size: cover;
+        }
+        .about-section {
+            margin-top: 5rem;
+        }
+        .about-section h2 {
+            font-size: 2rem;
+            color: #00E8F8;
+        }
+        .about-section p {
+            font-size: 1rem;
+            color: #fff;
+            margin-top: 1rem;
+        }
+        .skills-section {
+            margin-top: 5rem;
+        }
+        .skills-section h2 {
+            font-size: 2rem;
+            color: #00E8F8;
+        }
+        .skills-section ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .skills-section ul li {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .experience-section {
+            margin-top: 5rem;
+        }
+        .experience-section h2 {
+            font-size: 2rem;
+            color: #00E8F8;
+        }
+        .experience-section ul {
+            list-style: none;
+            margin-top: 1rem;
+            color: #fff;
+        }
+        .experience-section ul li {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .contact-section {
+            margin-top: 5rem;
+        }
+        .contact-section h2 {
+            font-size: 2rem;
+            color: #00E8F8;
+        }
+        .contact-section ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .contact-section ul li {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        @media only screen and (max-width:480px) {
+            .menu {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #244D61;
+            }
+            header {
+                padding: 0.7rem 1rem;
+                align-items: center;
+                max-width: 100%;
+            }
+            nav {
+                position: absolute;
+                display: grid;
+                top: 75px;
+                text-align: center;
+                background-color: #1F252E;
+                left: -100%;
+                z-index: 1;
+                width: 100%;
+            }
+            #click:checked~nav {
+                left: 0%;
+                transition: all 0.3s ease;
+            }
+            section {
+                margin: 1rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"></a>
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="mainicon">
+            <div class="menu">
+                <i class="bi bi-list"></i>
+            </div>
+        </label>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="main">
+            <div class="detail">
+                <h1><span>Hi, It's Me</span> <br> I'm <span style="color:#00E8F8;">Mathiyalagan</span></h1>
+                <p>QA Test Engineer<br></p>
+                <div class="social">
+                    <a href="https://github.com/mathiyalagan" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/s-mathiyalagan090807222" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <!-- <a href="#"><i class="bi bi-instagram"></i></a> -->
+                    <!-- <a href="#"><i class="bi bi-facebook"></i></a> -->
+                </div>
+            </div>
+            <div class="images">
+                <img src="" alt="" width="100%">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>Highly motivated Fresher Software Testing with a strong foundation in developing and executing comprehensive test plans and test cases. Skilled in collaborating with developers to identify and resolve software issues, creating and maintaining automated test scripts, and reporting and tracking software defects. Aiming to leverage my skills and passion for software testing to contribute to a dynamic team and ensure the delivery of high-quality software products.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Well versed with SDLC, STLC, and other Quality Assurance processes</li>
+            <li>Good in writing Test Cases, Test Planning, Test Scenarios, and Test Execution</li>
+            <li>Strong knowledge of Regression Testing, Performance Testing, and Stress Testing</li>
+            <li>Extensive knowledge in Smoke Testing, Functional Testing, and Usability Testing</li>
+            <li>Expertise in Agile Methodology and Defect Life Cycle</li>
+            <li>Excellent at identifying web elements using locators</li>
+            <li>Good knowledge of Python Selenium automation tool, including Selenium WebDriver</li>
+            <li>Applying automation techniques using Python to enhance software testing processes</li>
+            <li>Knowledge of API Testing using Postman and experience in Web & Mobile Application Testing</li>
+            <li>Scripting Languages: Python</li>
+            <li>Familiar with Mutable and Immutable Data Types</li>
+            <li>Expertise in Performing OOP Concepts</li>
+            <li>Strong advantage in applying functions</li>
+            <li>Capable of developing Decision-Making and Looping Statements</li>
+            <li>Good at solving logical problems</li>
+            <li>Tools: Charles, Jira, MS Office, VS Code, Selenium</li>
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>QA Intern - Viacom18, Bengaluru</strong>
+                <ul>
+                    <li>Assisted in the quality assurance and testing of content across various platforms.</li>
+                    <li>Collaborated with teams to identify and report bugs, glitches, and content inconsistencies.</li>
+                    <li>Gained hands-on experience with testing tools and methodologies in a dynamic media environment.</li>
+                    <li>Assisted in developing and executing test plans and test cases for various software applications.</li>
+                    <li>Collaborated with developers to identify and resolve software issues.</li>
+                    <li>Created and maintained automated test scripts using Selenium WebDriver and Python.</li>
+                    <li>Reported and tracked software defects using Jira.</li>
+                    <li>Participated in performance and regression testing of web applications.</li>
+                    <li>Gained hands-on experience in API testing using Charles.</li>
+                    <li>Conducted usability and functional testing of web and mobile applications.</li>
+                    <li>Worked in an Agile environment, contributing to daily stand-ups and sprint planning sessions.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <ul>
+        <li><strong>Phone:</strong> <a href="tel: +919677710252" style="color: white;">+91 96777 10252</a></li>
+        <li><strong>Email:</strong> <a href="mailto: mathibca678@gmail.com" style="color: white;">mathibca678@gmail.com</a></li>
+    </ul>
+</section>
+
+
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+</style>
+
+</html>
